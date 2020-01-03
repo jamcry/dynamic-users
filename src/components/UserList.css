@@ -1,0 +1,72 @@
+.profile-list-container {
+  width: 375px;
+  height: 667px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 24px;
+}
+
+.page-title {
+  font-family: Gotham, "Montserrat";
+  font-size: 20px;
+  color: #b1b8c5;
+}
+
+.btn-burger {
+  color: #6374f3;
+  font-weight: bold;
+}
+
+.profile-list-item {
+  background: #fff;
+  border-bottom: 1.75px solid #dbe0e5;
+  display: flex;
+}
+
+.profile-photo-container {
+  padding: 20px 22px 20px 24px;
+  width: 52px;
+  height: 52px;
+}
+
+.profile-photo-container img {
+  border-radius: 50%;
+  width: 52px;
+}
+
+.profile-list-container .user-fullname {
+  flex: 1;
+  align-items: center;
+}
+
+.profile-list-item .user-fullname {
+  display: flex;
+  justify-content: flex-start !important;
+  align-items: center !important;
+}
+.user-fullname {
+  display: flex;
+  font-size: 18px;
+  font-family: "Montserrat", "Gotham", Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-weight: bold;
+  color: #6374f3;
+}
+
+.profile-action {
+  display: flex;
+  flex-basis: 16px;
+  padding-right: 41px;
+  font-family: "Montserrat";
+  font-size: 24px;
+  color: #97a2ac;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+}
