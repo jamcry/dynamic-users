@@ -8,6 +8,13 @@
   height: 23px;
   width: 39px;
   margin-right: 16px;
+  display: flex;
+  justify-content: center;
+}
+
+.btn-back i {
+  font-size: 23px;
+  color: #6374f3;
 }
 
 .page-title {
@@ -135,10 +142,17 @@
 }
 
 .gender-icon {
-  display: block;
+  display: flex;
   width: 45px;
   height: 45px;
-  background: #6374f3;
+  justify-content: center;
+  align-items: center;
+}
+
+.gender-icon i {
+  display: inline-flex;
+  font-size: 45px;
+  color: #6374f3;
 }
 
 .bottom-details .age {

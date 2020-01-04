@@ -38,10 +38,12 @@ class ProfileDetails extends React.Component {
       age
     } = this.handleIncomingData(this.state.data);
 
+    const genderIconClass = "fas fa-" + ((gender === "male") ? "mars" : "venus");
+
     return (
       <>
         <div className="page-header profile-page">
-          <div className="btn-back" onClick={this.props.closeDetails}>{"<"}</div>
+          <div className="btn-back" onClick={this.props.closeDetails}><i className="fas fa-long-arrow-alt-left" /></div>
           <div className="page-title">MY PROFILE</div>
         </div>
         <div className="profile-details">
@@ -68,7 +70,7 @@ class ProfileDetails extends React.Component {
             <div className="gender">
               <div className="subtitle">Gender</div>
               <div className="subcontent">
-                <div className="gender-icon">{gender[0].toUpperCase()}</div>
+                <div className="gender-icon"><i className={genderIconClass} /></div>
               </div>
             </div>
             <div className="age">

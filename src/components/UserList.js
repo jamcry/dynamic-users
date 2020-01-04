@@ -51,7 +51,9 @@ class UserList extends React.Component {
           <>
             <div className="page-header">
               <div className="page-title">PROFILES</div>
-              <div className="btn-burger">E</div>
+              <div className="btn-burger">
+                <i className="fas fa-bars" />
+              </div>
             </div>
             <div className="profile-list-item">
               <div className="profile-photo-container">
@@ -62,7 +64,9 @@ class UserList extends React.Component {
                   {fullName}, {age}
                 </span>
               </div>
-              <div className="profile-action" onClick={this.toggleExpanded}>></div>
+              <div className="profile-action" onClick={this.toggleExpanded}>
+                <i className="fas fa-chevron-right" />
+              </div>
             </div>
           </>
         }
