@@ -41,7 +41,7 @@ class ProfileDetails extends React.Component {
     return (
       <>
         <div className="page-header profile-page">
-          <div className="btn-back">{"<"}</div>
+          <div className="btn-back" onClick={this.props.closeDetails}>{"<"}</div>
           <div className="page-title">MY PROFILE</div>
         </div>
         <div className="profile-details">
@@ -61,6 +61,7 @@ class ProfileDetails extends React.Component {
 
           <div className="map-container">
             <p>Map View</p>
+            <p>{ "Latitude: " + coordinates.latitude + ", Longitude: " + coordinates.longitude}</p>
           </div>
 
           <div className="bottom-details">
