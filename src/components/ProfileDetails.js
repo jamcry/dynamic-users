@@ -1,42 +1,14 @@
 import React from "react";
-import sampleData from "../helpers/sampleData";
 import "./ProfileDetails.css";
 
 class ProfileDetails extends React.Component {
-  constructor(props) {
-    super(props);
-
-    /*
-    subscribeToOutputStream((err, data) => {
-      this.setState({ data });
-    });
-   */
-
-    this.state = {
-      // Use sample (mockup) data
-      data: sampleData
-    };
-  }
-
-  handleIncomingData = data => {
-    const profile = data.results[0];
-    return {
-      fullName: profile.name.first + " " + profile.name.last,
-      imageUrl: profile.picture.medium,
-      gender: profile.gender,
-      coordinates: profile.location.coordinates,
-      age: profile.dob.age
-    };
-  };
-
   render() {
-    const {
-      fullName,
-      imageUrl,
-      gender,
-      coordinates,
-      age
-    } = this.handleIncomingData(this.state.data);
+    const { userData } = this.props;
+    const fullName = userData.name.first + " " + userData.name.last;
+    const imageUrl = userData.picture.medium;
+    const gender = userData.gender;
+    const coordinates = userData.location.coordinates;
+    const age = userData.dob.age;
 
     const genderIconClass = "fas fa-" + ((gender === "male") ? "mars" : "venus");
 
@@ -63,7 +35,7 @@ class ProfileDetails extends React.Component {
 
           <div className="map-container">
             <p>Map View</p>
-            <p>{ "Latitude: " + coordinates.latitude + ", Longitude: " + coordinates.longitude}</p>
+            <p>{"Latitude: " + coordinates.latitude + ", Longitude: " + coordinates.longitude}</p>
           </div>
 
           <div className="bottom-details">
