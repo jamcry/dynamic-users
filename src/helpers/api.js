@@ -1,13 +1,12 @@
 import openSocket from "socket.io-client";
-const noCorsPrefix = "https://cors-anywhere.herokuapp.com/";
-const appUrl = "https://wunder-provider.herokuapp.com/";
-const socketUrl = noCorsPrefix.concat(appUrl);
-const socket = openSocket(appUrl);
+const url = "https://wunder-provider.herokuapp.com/";
+const socket = openSocket(url);
 
 const subscribeToOutputStream = cb => {
   socket.on("connect", () => console.log("[ ] socket.io : Connected"));
   socket.on("userList", data => {
     // Invoke callback function with data (and null error)
+    console.log("fetching data...");
     cb(null, data);
     console.log({ data });
   });
