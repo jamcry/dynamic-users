@@ -10,18 +10,19 @@ class Profiles extends React.Component {
   constructor(props) {
     super(props);
 
-    
-    subscribeToOutputStream((err, data) => {
-      this.setState(prevState => ({ 
-        userList: [...prevState.userList, data.results[0]],
-      }));
-    });
-   
+    // subscribeToOutputStream((err, data) => {
+    //   this.setState(prevState => ({ 
+    //     userList: [...prevState.userList, data.results[0]],
+    //   }));
+    // });
 
     this.state = {
       expandedUser: null,
-      // Use sample (mockup) data
-      userList: []//[sampleData.results[0], sampleData2.results[0]]
+      //userList: []
+      /**/
+      // Use sample (mockup) data 
+      userList: [sampleData.results[0], sampleData2.results[0]]
+      /**/
     };
   }
 
@@ -32,10 +33,7 @@ class Profiles extends React.Component {
   }
 
   render() {
-    const { expandedUser } = this.state;
-    const userListStyle = {
-      display: (expandedUser ? "none" : "flex")
-    }
+    const userListStyle = { display: (this.state.expandedUser ? "none" : "flex") };
 
     return (
       <>

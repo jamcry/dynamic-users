@@ -17,6 +17,11 @@
   color: #6374f3;
 }
 
+.btn-back i:hover {
+  cursor: pointer;
+  color: #4a5ad1;
+}
+
 .page-title {
   box-sizing: border-box;
   height: 20px;

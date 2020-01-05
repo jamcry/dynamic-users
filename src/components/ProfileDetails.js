@@ -5,7 +5,7 @@ class ProfileDetails extends React.Component {
   render() {
     const { userData } = this.props;
     const fullName = userData.name.first + " " + userData.name.last;
-    const imageUrl = userData.picture.medium;
+    const imageUrl = userData.picture.large;
     const gender = userData.gender;
     const coordinates = userData.location.coordinates;
     const age = userData.dob.age;

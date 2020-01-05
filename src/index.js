@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import Profiles from "./components/Profiles";
 
 import "./index.css";
-import Profiles from "./components/Profiles";
 
 function App() {
   return (

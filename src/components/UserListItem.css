@@ -28,7 +28,6 @@
 .user-fullname {
   display: flex;
   font-size: 18px;
-  font-family: "Montserrat", "Gotham", Arial, Helvetica, sans-serif;
   font-weight: 500;
   font-weight: bold;
   color: #6374f3;
@@ -45,4 +44,9 @@
 .profile-action i {
   color: #97a2ac;
   font-size: 17px;
+}
+
+.profile-action i:hover {
+  color: #737b83;
+  cursor: pointer;
 }
