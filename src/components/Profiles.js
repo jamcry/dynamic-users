@@ -1,7 +1,5 @@
 import React from "react";
-// eslint-disable-next-line no-unused-vars
-//import { subscribeToOutputStream } from "../helpers/api";
-import { subscribeToOutputStream } from "../helpers/mockApi";
+import { subscribeToOutputStream } from "../helpers/api";
 import ProfileDetails from "./ProfileDetails";
 import UserList from "./UserList";
 import "./Profiles.scss";
