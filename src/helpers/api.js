@@ -4,14 +4,10 @@ const socket = openSocket(url);
 
 const subscribeToOutputStream = cb => {
   socket.on("connect", () => console.log("[ ] socket.io : Connected"));
-  socket.on("userList", data => {
-    // Invoke callback function with data (and null error)
-    console.log("fetching data...");
-    cb(null, data);
-    console.log({ data });
-  });
+  // Invoke callback function with userList data (and null error)
+  socket.on("userList", data => cb(null, data));
   socket.on("error", () => console.error("[!] ERROR with socket.io"));
-  socket.on("disconnect", () => console.log("[ ] socket.io : Disconnected"));
+  socket.on("disconnect", () => console.warn("[ ] socket.io : Disconnected"));
 };
 
 export { subscribeToOutputStream };

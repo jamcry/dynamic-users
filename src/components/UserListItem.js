@@ -1,5 +1,5 @@
 import React from "react";
-import "./UserListItem.css";
+import "./UserListItem.scss";
 
 const UserListItem = (props) => {
   const profile = props.userData;

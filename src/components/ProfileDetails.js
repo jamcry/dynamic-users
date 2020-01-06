@@ -1,5 +1,5 @@
 import React from "react";
-import "./ProfileDetails.css";
+import "./ProfileDetails.scss";
 
 class ProfileDetails extends React.Component {
   render() {
@@ -10,12 +10,15 @@ class ProfileDetails extends React.Component {
     const coordinates = userData.location.coordinates;
     const age = userData.dob.age;
 
+    // Assign gender icon class name according to the gender
     const genderIconClass = "fas fa-" + ((gender === "male") ? "mars" : "venus");
 
     return (
       <>
         <div className="page-header profile-page">
-          <div className="btn-back" onClick={this.props.closeDetails}><i className="fas fa-long-arrow-alt-left" /></div>
+          <div className="btn-back" onClick={this.props.closeDetails}>
+            <i className="fas fa-long-arrow-alt-left" />
+          </div>
           <div className="page-title">MY PROFILE</div>
         </div>
         <div className="profile-details">

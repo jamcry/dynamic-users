@@ -1,7 +1,0 @@
-.profile-list-container {
-  width: 375px;
-  height: 667px;
-  border: 1px solid black;
-  display: flex;
-  flex-direction: column;
-}

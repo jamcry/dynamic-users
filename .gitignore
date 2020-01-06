@@ -21,3 +21,6 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+*/helpers/mockApi.js
+*/helpers/sampleData*.js
