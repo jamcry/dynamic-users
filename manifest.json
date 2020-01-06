@@ -1,0 +1,8 @@
+{
+  "short_name": "Dynamic Users",
+  "name": "Dynamically updated user list layout developed with React.",
+  "start_url": "https://jamcry.github.io/dynamic-users/",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
